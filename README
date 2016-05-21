@@ -1,0 +1,15 @@
+README
+
+
+NOTE: Links still need to be added
+
+Chatter Box is a simple chatting application built with the purpose of furthering my skills as a web developer. Enter any user name and click log in to get started. You may also open this application in a separate window and log in as another user to test the application's functionality with multiple users.
+
+This application uses some of the following technologies:
+
+Node.JS
+Express
+Socket.IO
+Validator
+Bootstrap
+JQuery
