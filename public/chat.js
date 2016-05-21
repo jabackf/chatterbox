@@ -83,4 +83,5 @@ $(function(){
 	socket.on('user count',function(data){
 		$('.users-currently-online').html(data);
 	});
+
 });
