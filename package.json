@@ -1,0 +1,16 @@
+{
+  "name": "chatterbox",
+  "version": "1.0.0",
+  "description": "Socket.io based chat program",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonah Backfish",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*",
+    "validator": "^5.2.0"
+  }
+}

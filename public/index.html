@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title>Chatter-Box</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>  
+	<script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class='container'>
+
+		<div id='userLogin'>
+
+			<div clas='row'>
+				<div id='intro' class='well col-md-offset-2 col-md-5 col-sm-7 col-xs-6'>
+					<h3>A Simple Chat Application</h3>
+					<p>Chatter Box is a simple chatting application built with the purpose of furthering my skills as a 
+				 		web developer. Enter any user name and click log in to get started. You may also
+				 		<a onclick="window.open(window.location.href, '_blank');" href='#'>open this application in a separate window</a> and log in as another user to test the
+				 		application's functionality with multiple users.</p>
+				 	<p>This application uses some of the following technologies:</p>
+				 	<ul class='list'>
+				 		<li>Node.JS</li>
+				 		<li>Express</li>
+				 		<li>Socket.IO</li>
+				 		<li>Validator</li>
+				 		<li>Bootstrap</li>
+				 		<li>JQuery</li>
+				 	</ul>
+
+					<p><strong>Users currently online: <span class='users-currently-online'></span></strong></p>
+
+				</div>
+
+				<div class='col-md-3 col-sm-5 col-xs-12'>
+
+					<div class='text-center logo'>
+						<h1>Chatter-Box</h1>
+						<img src='gfx/teeth.png'></img><br/><br/>
+					</div>
+
+					<div class='well text-center'>
+						<h4>Enter a user name</h4>
+						
+						<form id='userLoginForm'>
+							<input class='form-control' id='userNameInput' /><br>
+							<div id='loginErrors' class='alert alert-danger'></div>
+							<div id='loginNotification' class='alert alert-info'>Please choose a username to get started.</div><br>
+							<input type='submit' class='btn btn-primary ' value='Log in' />
+						</form>
+
+						<div id='collapse-info'>
+							<button id='aboutbutton' data-toggle="collapse" data-target="#collapdiv">About this project</button>
+							<div id='collapdiv' class='collapse'>
+							 	<p>Chatter-Box is a simple chat application that I built to further my web development skills. Chatter-Box uses some of the following technologies.</p>
+							 	<ul class='list'>
+							 		<li>Node.JS</li>
+							 		<li>Express</li>
+							 		<li>Socket.IO</li>
+							 		<li>Validator</li>
+							 		<li>Bootstrap</li>
+							 		<li>JQuery</li>
+							 	</ul>
+							 	<p><strong>Users currently online: <span class='users-currently-online'></span></strong></p>
+							</div>
+						</div>
+
+					</div>
+					
+
+
+				</div>
+			</div>	
+			<div class='row'>
+				<div id='footer' class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-offset-2 col-xs-8">
+
+					<ul class='linklist text-center'>
+						<li><a href="#" onclick='window.alert("I am a new developer and my portfolio page is still under development. Please check back later!"'>My portfolio</a></li> - 
+						<li><a href="https://github.com/jabackf/chatterbox.git">Chatter-Box source code on GitHub</a></li> -
+						<li><a href="mailto:jabackf@yahoo.com">Email me</a></li>
+					</ul>
+					<hr>
+					<div id='about' class='text-center'>
+						<strong>About the author:</strong> Jonah Backfish is a freelance web developer, programmer, and musician. You can view more of my work at the link above. If you are interested in collaboration
+						opportunities, please don't hesitate to contact me.
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class='row' id='messageArea'>
+
+
+			<div class='col-md-9'>
+				<div class='chat' id='chat'></div>
+
+				<form id='messageForm'>
+					<div class='form-group'>
+						<textarea class='form-control' id='message' placeholder='Enter your message...'></textarea>
+						<br />
+						<input type='submit' class='btn btn-primary' value='Send Message' />
+						<button type="button" class='btn btn-primary' id='logoffbutton'>Log off</button>
+					</div>
+				</form>
+				
+			</div>
+
+			<div class='col-md-3'>
+				<div class='well'>
+					<h4 id='userheading'>Users Currently Online: <span class='users-currently-online'></span></h4>
+					<ul class='list-group' id='users'></ul>
+				</div>
+
+
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src='chat.js'></script>
+
+</body>
+</html>

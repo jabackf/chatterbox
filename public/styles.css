@@ -1,0 +1,122 @@
+body {
+	margin-top: 10px;
+	background-color:rgb(100,160,200);
+}
+#userLogin{
+	margin-top:10px;
+}
+ul {
+	list-style-position: inside;
+}
+#messageArea {
+	display: none;
+}
+#loginErrors {
+	display:none;
+	font-size:small;
+	padding:3px;
+}
+#loginNotification{
+	font-size:small;
+	padding:3px;
+}
+#users{			
+	overflow-y: scroll;
+	height:75%; 
+}
+#chat{
+	overflow-y: scroll; 
+	height:75%;
+	border:1px solid darkgray;
+	border-radius:5px;
+	word-break: break-word;
+	background-color:white;
+	padding:5px;
+}
+.usericon{
+	background: url('gfx/usericon.png');
+	margin-right:5px;
+	display:inline-block;
+	width:22px;
+	height:22px;
+	vertical-align: bottom;
+}
+.meicon{
+	background: url('gfx/meicon.png');
+	margin-right:5px;
+	display:inline-block;
+	width:22px;
+	height:22px;
+	vertical-align: bottom;
+}
+.console-system-message{
+	color:#6798ac;
+}
+.chat-user-message:nth-child(odd) {
+	background:rgb(240,234,250);
+}
+.well {
+	background-color:white;
+}
+.logo {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:white;
+	text-shadow: -3px 3px black;
+}
+#intro{
+	margin-top:25px;
+}
+.linklist{
+	list-style: none;
+	color:white;
+}
+.linklist li {
+	display:inline-block;
+}
+.linklist a {
+	color:white;
+}
+hr{
+	margin-top:0;
+	margin-bottom:4px;
+}
+#about{
+	font-size: small;
+	color:white;
+}
+#footer{
+	background-color:rgb(50,110,150);
+	border-radius:4px;
+	padding:8px;
+	margin-top:10px;
+}
+#logoffbutton {
+	float:right;
+}
+#collapse-info{
+	display:none;
+}
+
+@media only screen and (max-width: 767px) {
+	#intro{
+		display:none;
+	}
+	#collapse-info{
+		display:block;
+	}
+	#footer{
+	font-size:small;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	#userheading{
+		font-size:small;
+	}
+	#users{
+		max-height:15%;
+	}
+	#users li{
+		display:inline-block;
+	}
+}
